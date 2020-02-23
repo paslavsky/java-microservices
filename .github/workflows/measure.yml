@@ -15,3 +15,5 @@ jobs:
       run: ./gradlew build
     - name: Grant execute permission for run.sh
       run: chmod +x run.sh
+    - name: Collect metrics
+      run: ./run.sh

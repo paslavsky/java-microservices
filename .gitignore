@@ -7,3 +7,4 @@ gradle-app.setting
 out
 *.csv
 .env
+_work
