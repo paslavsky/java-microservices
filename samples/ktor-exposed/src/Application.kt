@@ -14,10 +14,10 @@ import io.ktor.routing.post
 import io.ktor.routing.routing
 import net.paslavsky.ktor.exposed.ExposedFeature
 import net.paslavsky.ktor.sql.SqlFeature
-import org.jetbrains.exposed.dao.EntityID
 import org.jetbrains.exposed.dao.LongEntity
 import org.jetbrains.exposed.dao.LongEntityClass
-import org.jetbrains.exposed.dao.LongIdTable
+import org.jetbrains.exposed.dao.id.EntityID
+import org.jetbrains.exposed.dao.id.LongIdTable
 import org.jetbrains.exposed.sql.SchemaUtils
 import org.jetbrains.exposed.sql.transactions.transaction
 import org.slf4j.LoggerFactory
@@ -33,7 +33,7 @@ fun main(args: Array<String>) {
 fun Application.module() {
     install(SqlFeature)
     install(ExposedFeature) {
-        init = {
+        init {
             transaction {
                 SchemaUtils.create(Persons)
             }

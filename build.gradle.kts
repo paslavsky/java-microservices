@@ -31,7 +31,7 @@ buildscript {
 class ProjectDescription(
     val name: String,
     val version: String = "0.1",
-    private val artifact: ProjectDescription.() -> String = { "./$name/build/libs/$name-$version.jar" },
+    private val artifact: ProjectDescription.() -> String = { "./samples/$name/build/libs/$name-$version.jar" },
     val startPattern: Pattern = ".+Started\\s([\\w\\d]+)\\sin\\s(\\d+\\.?\\d*)\\sseconds\\s\\(JVM\\srunning\\sfor\\s(\\d+\\.?\\d*)\\).*".toPattern(),
     val uptimeGroupNumber: Int = 3,
     val test: Test
@@ -148,7 +148,7 @@ open class ExecApplication : DefaultTask() {
     }
 
     private val Process.pid: Int?
-        get() = if (javaClass.name == "java.lang.UNIXProcess") {
+        get() = if (javaClass.name in kotlin.collections.setOf("java.lang.UNIXProcess", "java.lang.ProcessImpl")) {
             try {
                 javaClass.getDeclaredField("pid").apply { isAccessible = true }.getInt(this)
             } catch (e: Throwable) {
@@ -192,75 +192,72 @@ val projects = listOf(
     ),
     ProjectDescription(
         name = "micronaut-simple",
-        artifact = { "./$name/build/libs/$name-$version-all.jar" },
+        artifact = { "./samples/$name/build/libs/$name-$version.jar" },
         startPattern = ".+Uptime\\s(\\d+\\.?\\d*)\\sseconds.*".toPattern(),
         uptimeGroupNumber = 1,
         test = testSimple()
     ),
     ProjectDescription(
         name = "micronaut-basic-auth",
-        artifact = { "./$name/build/libs/$name-$version-all.jar" },
+        artifact = { "./samples/$name/build/libs/$name-$version.jar" },
         startPattern = ".+Uptime\\s(\\d+\\.?\\d*)\\sseconds.*".toPattern(),
         uptimeGroupNumber = 1,
         test = testSimple("Authorization" to "Basic dXNlcjpwYXNzd29yZA==")
     ),
     ProjectDescription(
         name = "micronaut-jpa",
-        artifact = { "./$name/build/libs/$name-$version-all.jar" },
+        artifact = { "./samples/$name/build/libs/$name-$version.jar" },
         startPattern = ".+Uptime\\s(\\d+\\.?\\d*)\\sseconds.*".toPattern(),
         uptimeGroupNumber = 1,
         test = testDB()
     ),
     ProjectDescription(
         name = "micronaut-jdbc",
-        artifact = { "./$name/build/libs/$name-$version-all.jar" },
+        artifact = { "./samples/$name/build/libs/$name-$version.jar" },
         startPattern = ".+Uptime\\s(\\d+\\.?\\d*)\\sseconds.*".toPattern(),
         uptimeGroupNumber = 1,
         test = testDB()
     ),
     ProjectDescription(
         name = "ktor-simple",
-        artifact = { "./$name/build/libs/$name-$version-all.jar" },
+        artifact = { "./samples/$name/build/libs/$name-$version.jar" },
         startPattern = ".+Uptime\\s(\\d+\\.?\\d*)\\sseconds.*".toPattern(),
         uptimeGroupNumber = 1,
         test = testSimple()
     ),
     ProjectDescription(
         name = "ktor-basic-auth",
-        artifact = { "./$name/build/libs/$name-$version-all.jar" },
+        artifact = { "./samples/$name/build/libs/$name-$version.jar" },
         startPattern = ".+Uptime\\s(\\d+\\.?\\d*)\\sseconds.*".toPattern(),
         uptimeGroupNumber = 1,
         test = testSimple("Authorization" to "Basic dXNlcjpwYXNzd29yZA==")
     ),
     ProjectDescription(
         name = "ktor-exposed",
-        artifact = { "./$name/build/libs/$name-$version-all.jar" },
+        artifact = { "./samples/$name/build/libs/$name-$version.jar" },
         startPattern = ".+Uptime\\s(\\d+\\.?\\d*)\\sseconds.*".toPattern(),
         uptimeGroupNumber = 1,
         test = testDB()
     )
 )
 
-val buildTasks = projects.map {
-    task("${it.name}-rebuild", GradleBuild::class) {
-        buildFile = file("./${it.name}/build.gradle")
-        tasks = listOf("clean", "build")
-        doFirst {
-            logger.lifecycle("> Rebuilding ${it.name} project")
-        }
-    }
-}.toTypedArray()
+task("build", GradleBuild::class) {
+    buildFile = file("./samples/build.gradle")
+    tasks = listOf("build")
 
-task("rebuild") {
-    dependsOn(*buildTasks)
     doLast {
+        logger.info("Collecting size of the artifacts")
         val csv = csv(File("artifacts.csv"), arrayOf("Project", "Artifact Size"))
         projects.forEach {
             csv.printRecord(it.name, it.artifactSize)
         }
         csv.close(true)
-        logger.info("> Rebuild completed")
     }
+}
+
+task("clean", GradleBuild::class) {
+    buildFile = file("./samples/build.gradle")
+    tasks = listOf("clean")
 }
 
 val runTasks = projects.map {

@@ -1,4 +1,4 @@
-rootProject.name = 'java-microservices-examples'
+rootProject.name = 'java-microservices-samples'
 
 file('.').eachDir { sub ->
     if (!(sub.name in ['.gradle', 'gradle', 'out', 'build']) && sub.isDirectory())
