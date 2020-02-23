@@ -1,4 +1,4 @@
-name: Measure microservice frameworks
+name: Build samples
 
 on: [push]
 
@@ -23,7 +23,3 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew build
-    - name: Grant execute permission for run.sh
-      run: chmod +x run.sh
-    - name: Run samples
-      run: ./run.sh
