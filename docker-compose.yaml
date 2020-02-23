@@ -7,3 +7,5 @@ services:
       dockerfile: Dockerfile
       args:
         - GH_TOKEN=${GH_TOKEN}
+    volumes:
+    - ./_work:/usr/actions-runner/_work/

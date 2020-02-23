@@ -7,6 +7,8 @@ RUN apt-get update && apt-get install -y curl sudo openjdk-11-jdk
 RUN useradd github \
 	&& echo "github ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers \
 	&& usermod -aG sudo github \
+	&& mkdir /home/github \
+	&& chown -R github:github /home/github \
 	&& mkdir /usr/actions-runner
 
 RUN cd /usr/actions-runner \
