@@ -1,6 +1,7 @@
 package com.github.paslavsky
 
 import io.ktor.application.Application
+import io.ktor.application.ApplicationStarted
 import io.ktor.application.call
 import io.ktor.response.respondText
 import io.ktor.routing.get
@@ -10,12 +11,15 @@ import java.lang.management.ManagementFactory
 
 fun main(args: Array<String>) {
     io.ktor.server.netty.EngineMain.main(args)
-    val uptime = ManagementFactory.getRuntimeMXBean().uptime / 1000.0
-    LoggerFactory.getLogger(Application::class.java).info("Uptime $uptime seconds")
 }
 
 @Suppress("unused") // Referenced in application.conf
 fun Application.module() {
+    environment.monitor.subscribe(ApplicationStarted) {
+        val uptime = ManagementFactory.getRuntimeMXBean().uptime / 1000.0
+        LoggerFactory.getLogger(Application::class.java).info("Uptime $uptime seconds")
+    }
+
     routing {
         get("/fibonacci") {
             val n = call.request.queryParameters["n"]?.toLong() ?: 10L

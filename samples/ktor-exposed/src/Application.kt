@@ -2,6 +2,7 @@ package com.github.paslavsky
 
 import com.fasterxml.jackson.databind.SerializationFeature
 import io.ktor.application.Application
+import io.ktor.application.ApplicationStarted
 import io.ktor.application.call
 import io.ktor.application.install
 import io.ktor.features.ContentNegotiation
@@ -14,28 +15,33 @@ import io.ktor.routing.post
 import io.ktor.routing.routing
 import net.paslavsky.ktor.exposed.ExposedFeature
 import net.paslavsky.ktor.sql.SqlFeature
+import net.paslavsky.ktor.sql.dataSource
 import org.jetbrains.exposed.dao.LongEntity
 import org.jetbrains.exposed.dao.LongEntityClass
 import org.jetbrains.exposed.dao.id.EntityID
 import org.jetbrains.exposed.dao.id.LongIdTable
-import org.jetbrains.exposed.sql.SchemaUtils
 import org.jetbrains.exposed.sql.transactions.transaction
 import org.slf4j.LoggerFactory
 import java.lang.management.ManagementFactory
 
 fun main(args: Array<String>) {
     io.ktor.server.netty.EngineMain.main(args)
-    val uptime = ManagementFactory.getRuntimeMXBean().uptime / 1000.0
-    LoggerFactory.getLogger(Application::class.java).info("Uptime $uptime seconds")
 }
 
 @Suppress("unused") // Referenced in application.conf
 fun Application.module() {
+    environment.monitor.subscribe(ApplicationStarted) {
+        val uptime = ManagementFactory.getRuntimeMXBean().uptime / 1000.0
+        LoggerFactory.getLogger(Application::class.java).info("Uptime $uptime seconds")
+    }
+
     install(SqlFeature)
     install(ExposedFeature) {
         init {
             transaction {
-                SchemaUtils.create(Persons)
+                dataSource.connection.createStatement().use {
+                    it.execute("CREATE TABLE persons(id SERIAL, first_name VARCHAR(255), last_name VARCHAR(255))")
+                }
             }
         }
     }

@@ -38,6 +38,7 @@ dependencies {
 
 shadowJar {
     mergeServiceFiles()
+    getArchiveClassifier().set('')
 }
 
 run.jvmArgs('-noverify', '-XX:TieredStopAtLevel=1')

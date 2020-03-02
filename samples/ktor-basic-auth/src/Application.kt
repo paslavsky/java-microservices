@@ -1,6 +1,7 @@
 package com.github.paslavsky
 
 import io.ktor.application.Application
+import io.ktor.application.ApplicationStarted
 import io.ktor.application.call
 import io.ktor.application.install
 import io.ktor.auth.Authentication
@@ -15,12 +16,15 @@ import java.lang.management.ManagementFactory
 
 fun main(args: Array<String>) {
     io.ktor.server.netty.EngineMain.main(args)
-    val uptime = ManagementFactory.getRuntimeMXBean().uptime / 1000.0
-    LoggerFactory.getLogger(Application::class.java).info("Uptime $uptime seconds")
 }
 
 @Suppress("unused")
 fun Application.module() {
+    environment.monitor.subscribe(ApplicationStarted) {
+        val uptime = ManagementFactory.getRuntimeMXBean().uptime / 1000.0
+        LoggerFactory.getLogger(Application::class.java).info("Uptime $uptime seconds")
+    }
+
     install(Authentication) {
         basic(name = "basicAuth") {
             realm = "Ktor Server"

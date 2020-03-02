@@ -38,6 +38,7 @@ dependencies {
 }
 
 shadowJar {
+    getArchiveClassifier().set('')
     mergeServiceFiles()
 }
 

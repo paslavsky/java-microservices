@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-./gradlew run --no-parallel --no-daemon
+./gradlew measure-all --no-parallel --no-daemon $@
