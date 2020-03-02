@@ -1,1 +1,10 @@
 apply plugin: 'measure'
+
+task("dry-run") {
+    group = 'measure'
+
+    measure.'number of sample starts' = 1
+    measure.'number of test requests' = 3
+
+    dependsOn 'measure-all'
+}
