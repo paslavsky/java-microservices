@@ -3,7 +3,7 @@ name: Measure Samples
 on:
   push:
     tags:
-      - 'v*'
+      - '*'
 
 jobs:
   measure:
@@ -36,7 +36,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: ${{ github.ref }}
-          release_name: Release ${{ github.ref }}
+          release_name: Metrics ${{ github.ref }}
           draft: false
           prerelease: false
 
