@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/static/css/main.279057a0.chunk.css",
-    "main.js": "/static/js/main.bab33a13.chunk.js",
-    "main.js.map": "/static/js/main.bab33a13.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.57ee5d8d.js",
-    "runtime-main.js.map": "/static/js/runtime-main.57ee5d8d.js.map",
-    "static/css/2.530f9d56.chunk.css": "/static/css/2.530f9d56.chunk.css",
-    "static/js/2.3962bb12.chunk.js": "/static/js/2.3962bb12.chunk.js",
-    "static/js/2.3962bb12.chunk.js.map": "/static/js/2.3962bb12.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.6ef6d4b444e949be2dc9b4c6fb396a7b.js": "/precache-manifest.6ef6d4b444e949be2dc9b4c6fb396a7b.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.530f9d56.chunk.css.map": "/static/css/2.530f9d56.chunk.css.map",
-    "static/css/main.279057a0.chunk.css.map": "/static/css/main.279057a0.chunk.css.map",
-    "static/js/2.3962bb12.chunk.js.LICENSE.txt": "/static/js/2.3962bb12.chunk.js.LICENSE.txt",
-    "static/media/primereact.min.css": "/static/media/line.567f5738.gif",
-    "static/media/materialdesignicons.min.css": "/static/media/materialdesignicons-webfont.f5111234.ttf",
-    "static/media/theme.css": "/static/media/open-sans-v15-latin-regular.cffb686d.woff2",
-    "static/media/primeicons.css": "/static/media/primeicons.e5e0e944.svg"
+    "main.css": "/java-microservices/static/css/main.279057a0.chunk.css",
+    "main.js": "/java-microservices/static/js/main.d140c6db.chunk.js",
+    "main.js.map": "/java-microservices/static/js/main.d140c6db.chunk.js.map",
+    "runtime-main.js": "/java-microservices/static/js/runtime-main.2a50764b.js",
+    "runtime-main.js.map": "/java-microservices/static/js/runtime-main.2a50764b.js.map",
+    "static/css/2.65bef6b8.chunk.css": "/java-microservices/static/css/2.65bef6b8.chunk.css",
+    "static/js/2.3962bb12.chunk.js": "/java-microservices/static/js/2.3962bb12.chunk.js",
+    "static/js/2.3962bb12.chunk.js.map": "/java-microservices/static/js/2.3962bb12.chunk.js.map",
+    "index.html": "/java-microservices/index.html",
+    "precache-manifest.144b70ae6db6f881a37f9ad40b9d0e4b.js": "/java-microservices/precache-manifest.144b70ae6db6f881a37f9ad40b9d0e4b.js",
+    "service-worker.js": "/java-microservices/service-worker.js",
+    "static/css/2.65bef6b8.chunk.css.map": "/java-microservices/static/css/2.65bef6b8.chunk.css.map",
+    "static/css/main.279057a0.chunk.css.map": "/java-microservices/static/css/main.279057a0.chunk.css.map",
+    "static/js/2.3962bb12.chunk.js.LICENSE.txt": "/java-microservices/static/js/2.3962bb12.chunk.js.LICENSE.txt",
+    "static/media/primereact.min.css": "/java-microservices/static/media/line.567f5738.gif",
+    "static/media/materialdesignicons.min.css": "/java-microservices/static/media/materialdesignicons-webfont.f5111234.ttf",
+    "static/media/theme.css": "/java-microservices/static/media/open-sans-v15-latin-regular.cffb686d.woff2",
+    "static/media/primeicons.css": "/java-microservices/static/media/primeicons.e5e0e944.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.57ee5d8d.js",
-    "static/css/2.530f9d56.chunk.css",
+    "static/js/runtime-main.2a50764b.js",
+    "static/css/2.65bef6b8.chunk.css",
     "static/js/2.3962bb12.chunk.js",
     "static/css/main.279057a0.chunk.css",
-    "static/js/main.bab33a13.chunk.js"
+    "static/js/main.d140c6db.chunk.js"
   ]
 }
