@@ -23,3 +23,33 @@
 body {
     background: lightgray;
 }
+
+.tags-search, .samples-list {
+    width: 100% !important;
+}
+
+.tags-search > .p-autocomplete-multiple-container {
+    width: 100%;
+}
+
+
+.samples-list > .p-listbox-list-wrapper {
+    max-height: 450px;
+}
+
+.samples-list > div {
+    width: 100%;
+}
+
+.samples-list .p-highlight {
+    background: rgba(0,0,0,0) !important;
+    color: rgb(51,51,51) !important;;
+}
+
+.app-tools {
+    padding-top: 10px;
+}
+
+.app-tools > .p-col > button {
+    width: 100%;
+}
