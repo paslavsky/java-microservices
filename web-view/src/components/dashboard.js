@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import {connect} from 'react-redux';
-import {Chart} from "primereact/chart";
 import _ from 'lodash';
 import {Card} from "primereact/card";
 import {ScrollPanel} from "primereact/scrollpanel";
