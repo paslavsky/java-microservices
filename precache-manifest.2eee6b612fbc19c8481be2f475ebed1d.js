@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3cc59a0476aba9661a7b1b76e7de7a4c",
+    "revision": "8e115bc40f4c75e46b31cfba2185a2b4",
     "url": "/java-microservices/index.html"
   },
   {
-    "revision": "92e6527cb64b14b917d5",
-    "url": "/java-microservices/static/css/2.65bef6b8.chunk.css"
+    "revision": "03de4235d59fef3a8bc9",
+    "url": "/java-microservices/static/css/2.2ea7c8c3.chunk.css"
   },
   {
-    "revision": "4eaa6cca4131a927a02d",
-    "url": "/java-microservices/static/css/main.279057a0.chunk.css"
+    "revision": "0956a879f82098a699ae",
+    "url": "/java-microservices/static/css/main.514e0559.chunk.css"
   },
   {
-    "revision": "92e6527cb64b14b917d5",
-    "url": "/java-microservices/static/js/2.23aa2e59.chunk.js"
+    "revision": "03de4235d59fef3a8bc9",
+    "url": "/java-microservices/static/js/2.dc81b2c8.chunk.js"
   },
   {
     "revision": "14b43d3b8bf07a0152720664793b77a0",
-    "url": "/java-microservices/static/js/2.23aa2e59.chunk.js.LICENSE.txt"
+    "url": "/java-microservices/static/js/2.dc81b2c8.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4eaa6cca4131a927a02d",
-    "url": "/java-microservices/static/js/main.c7be0152.chunk.js"
+    "revision": "0956a879f82098a699ae",
+    "url": "/java-microservices/static/js/main.4ec88909.chunk.js"
   },
   {
     "revision": "2953cc678252369e2f4a",
