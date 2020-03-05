@@ -35,7 +35,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build -u \"Andrew Paslavsky <a.paslavsky@gmail.com>\""
   },
   "eslintConfig": {
     "extends": "react-app"
