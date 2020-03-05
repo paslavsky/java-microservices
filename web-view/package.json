@@ -2,6 +2,7 @@
   "name": "java-microservices-view",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://paslavsky.github.io/java-microservices/",
   "dependencies": {
     "@mdi/font": "^4.9.95",
     "@mdi/js": "^4.9.95",
@@ -26,7 +27,7 @@
     "prop-types": "latest"
   },
   "devDependencies": {
-    "gh-pages": "^1.0.0"
+    "gh-pages": "^2.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
