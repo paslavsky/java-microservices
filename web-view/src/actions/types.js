@@ -1,2 +1,3 @@
 export const LOAD_GH_RELEASE='LOAD_GH_RELEASE';
 export const LOAD_METRICS='LOAD_METRICS';
+export const GET_DOC_FILE='GET_DOC_FILE';

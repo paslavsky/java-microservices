@@ -7,6 +7,7 @@ import Dashboard from "./dashboard";
 import AppMenu from "./app-menu";
 import SampleView from "./sample-view";
 import NotFound from "./404";
+import Doc from "./doc";
 
 
 class App extends React.Component {
@@ -15,8 +16,7 @@ class App extends React.Component {
     }
 
     render() {
-        const loaded = this.props.loaded;
-        if (!loaded)
+        if (!this.props.loaded)
             return (
                 <ProgressSpinner/>
             );
@@ -27,6 +27,7 @@ class App extends React.Component {
                 <Switch>
                     <Route exact path="/" component={Dashboard}/>
                     <Route exact path="/404" component={NotFound}/>
+                    <Route exact path="/docs/:doc" component={Doc}/>
                     <Route exact path="/:sample" component={SampleView}/>
                 </Switch>
             </HashRouter>

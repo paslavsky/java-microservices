@@ -14,7 +14,7 @@ const TagsCard = props => {
         }
         tag.count += 1;
     });
-    debugger
+
     return (
         <Card style={{width: '280px', marginTop: '10px'}}>
             <TagCloud

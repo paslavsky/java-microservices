@@ -14,6 +14,7 @@
     "chart.js": "^2.9.3",
     "classnames": "^2.2.6",
     "lodash": "^4.17.15",
+    "markdown-to-jsx": "^6.11.0",
     "primeflex": "^1.0.0",
     "primeicons": "^2.0.0",
     "primereact": "^4.0.0",
@@ -28,12 +29,17 @@
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0"
   },
+  "devDependencies": {
+    "serve": "^11.3.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "serve-repo": "serve ../"
   },
+  "proxy": "http://localhost:5000",
   "eslintConfig": {
     "extends": "react-app"
   },

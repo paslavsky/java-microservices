@@ -34,12 +34,14 @@ const AppMenu = (props) => {
                 <div className="p-toolbar-group-left">
                     <Button icon="mdi mdi-24 mdi-menu" className="p-button-secondary"
                             style={{marginRight: '.25em'}}
-                            onClick={(e) => setSidebarVisible(true)}/>
+                            onClick={() => setSidebarVisible(true)}/>
                 </div>
                 <div className="p-toolbar-group-right">
                     <Button icon="mdi mdi-24 mdi-help" className="p-button-secondary"
-                            style={{marginRight: '.25em'}}/>
-                    <Button icon="mdi mdi-24 mdi-github-circle" className="p-button-secondary"/>
+                            style={{marginRight: '.25em'}} onClick={go2('/docs/index.md')}/>
+                    <Button icon="mdi mdi-24 mdi-github-circle" className="p-button-secondary"
+                            onClick={() => window.open("https://github.com/paslavsky/java-microservices/")}
+                    />
                 </div>
             </Toolbar>
 

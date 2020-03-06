@@ -1,4 +1,4 @@
-import {LOAD_GH_RELEASE, LOAD_METRICS} from "./types";
+import {GET_DOC_FILE, LOAD_GH_RELEASE, LOAD_METRICS} from "./types";
 import axios from 'axios';
 
 export const fetchGitHubRelease = (release = 'latest') => async dispatch => {
@@ -29,4 +29,19 @@ export const fetchMetrics = (releaseId, assetId, url) => async dispatch => {
         type: LOAD_METRICS,
         payload: data
     });
+};
+
+const docsBaseURL = process.env.REACT_APP_DOCS_PATH;
+const docs = axios.create({baseURL: docsBaseURL});
+export const fetchDoc = name => async dispatch => {
+    const doc = await docs.get(`/${name}`).then(value => ({
+        content: value.data
+    })).catch(reason => ({
+        error: reason
+    }));
+
+    dispatch({
+        type: GET_DOC_FILE,
+        payload: {name, ...doc}
+    })
 };

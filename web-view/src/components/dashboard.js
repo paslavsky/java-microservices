@@ -139,7 +139,9 @@ const mapStateToProps = state => {
             datasets: state.metrics.map(sample => ({
                 label: sample.name,
                 backgroundColor: colors[sample.name],
-                data: statistics(sample.metrics.map(run => (run.requestTime[0])))
+                data: statistics(sample.metrics.map(run => (
+                    run.requestTime[0] - avg(_.tail(run.requestTime))
+                )))
             }))
         },
         requestTime: {

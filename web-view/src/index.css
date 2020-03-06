@@ -42,8 +42,8 @@ body {
 }
 
 .samples-list .p-highlight {
-    background: rgba(0,0,0,0) !important;
-    color: rgb(51,51,51) !important;;
+    background: inherit !important;
+    color: inherit !important;
 }
 
 .app-tools {
