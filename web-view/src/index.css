@@ -53,3 +53,9 @@ body {
 .app-tools > .p-col > button {
     width: 100%;
 }
+
+code {
+    background: #f8f8f8;
+    color: #333;
+    padding: 0.5em;
+}

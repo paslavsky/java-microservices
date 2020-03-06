@@ -6,6 +6,11 @@ import {ProgressSpinner} from "primereact/progressspinner";
 import {ScrollPanel} from "primereact/scrollpanel";
 import Markdown from "markdown-to-jsx";
 import DocLink from "./doc-link";
+import hljs from 'highlight.js/lib/highlight';
+import hljs_json from 'highlight.js/lib/languages/json';
+import hljs_js from 'highlight.js/lib/languages/javascript';
+import hljs_java from 'highlight.js/lib/languages/java';
+import 'highlight.js/styles/github-gist.css'
 
 const TOC_DOC = 'toc.md';
 
@@ -13,10 +18,14 @@ class Doc extends React.Component {
 
     componentDidMount() {
         this.fetch();
+        hljs.registerLanguage("json", hljs_json);
+        hljs.registerLanguage("javascript", hljs_js);
+        hljs.registerLanguage("java", hljs_java);
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
         this.fetch();
+        hljs.initHighlighting();
     }
 
     fetch() {

@@ -1,12 +1,24 @@
-# Overview of the different frameworks to build microservices in java world
+# Comparing Java Frameworks for Microservices
 
-This repository contains the following examples:
-* Spring Boot:
-    * Spring Boot Simple Application
-    * Spring Boot with Spring Security (Basic Auth)
-    * Spring Boot with JPA
-* Micronaut
-    * Micronaut Simple Application
-    * Micronaut with Basic Auth
-    * Micronaut with JPA
-* Ktor
+![GitHub Pages](https://github.com/paslavsky/java-microservices/workflows/GitHub%20Pages/badge.svg)
+![Build samples](https://github.com/paslavsky/java-microservices/workflows/Build%20samples/badge.svg)
+![Measure Samples](https://github.com/paslavsky/java-microservices/workflows/Measure%20Samples/badge.svg)
+
+# [Dashboard](https://paslavsky.github.io/java-microservices/)
+
+### Memory on start
+![Memory on start](./docs/1.png)
+
+### Working memory
+![Working memory](./docs/2.png)
+
+### Uptime
+![Uptime](./docs/3.png)
+
+### Warming up
+![Warming up](./docs/4.png)
+
+### Request time
+![Working memory](./docs/5.png)
+
+For more information see [documentation](./docs/index.md)
