@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/java-microservices/static/css/main.514e0559.chunk.css",
-    "main.js": "/java-microservices/static/js/main.4ec88909.chunk.js",
-    "main.js.map": "/java-microservices/static/js/main.4ec88909.chunk.js.map",
+    "main.css": "/java-microservices/static/css/main.65b429b1.chunk.css",
+    "main.js": "/java-microservices/static/js/main.043000f0.chunk.js",
+    "main.js.map": "/java-microservices/static/js/main.043000f0.chunk.js.map",
     "runtime-main.js": "/java-microservices/static/js/runtime-main.2a50764b.js",
     "runtime-main.js.map": "/java-microservices/static/js/runtime-main.2a50764b.js.map",
-    "static/css/2.2ea7c8c3.chunk.css": "/java-microservices/static/css/2.2ea7c8c3.chunk.css",
-    "static/js/2.dc81b2c8.chunk.js": "/java-microservices/static/js/2.dc81b2c8.chunk.js",
-    "static/js/2.dc81b2c8.chunk.js.map": "/java-microservices/static/js/2.dc81b2c8.chunk.js.map",
+    "static/css/2.6a388199.chunk.css": "/java-microservices/static/css/2.6a388199.chunk.css",
+    "static/js/2.cfd6f862.chunk.js": "/java-microservices/static/js/2.cfd6f862.chunk.js",
+    "static/js/2.cfd6f862.chunk.js.map": "/java-microservices/static/js/2.cfd6f862.chunk.js.map",
     "index.html": "/java-microservices/index.html",
-    "precache-manifest.2eee6b612fbc19c8481be2f475ebed1d.js": "/java-microservices/precache-manifest.2eee6b612fbc19c8481be2f475ebed1d.js",
+    "precache-manifest.f7c25abd920e95f0adac90b140a48862.js": "/java-microservices/precache-manifest.f7c25abd920e95f0adac90b140a48862.js",
     "service-worker.js": "/java-microservices/service-worker.js",
-    "static/css/2.2ea7c8c3.chunk.css.map": "/java-microservices/static/css/2.2ea7c8c3.chunk.css.map",
-    "static/css/main.514e0559.chunk.css.map": "/java-microservices/static/css/main.514e0559.chunk.css.map",
-    "static/js/2.dc81b2c8.chunk.js.LICENSE.txt": "/java-microservices/static/js/2.dc81b2c8.chunk.js.LICENSE.txt",
+    "static/css/2.6a388199.chunk.css.map": "/java-microservices/static/css/2.6a388199.chunk.css.map",
+    "static/css/main.65b429b1.chunk.css.map": "/java-microservices/static/css/main.65b429b1.chunk.css.map",
+    "static/js/2.cfd6f862.chunk.js.LICENSE.txt": "/java-microservices/static/js/2.cfd6f862.chunk.js.LICENSE.txt",
     "static/media/primereact.min.css": "/java-microservices/static/media/line.567f5738.gif",
     "static/media/materialdesignicons.min.css": "/java-microservices/static/media/materialdesignicons-webfont.f5111234.ttf",
     "static/media/theme.css": "/java-microservices/static/media/open-sans-v15-latin-regular.cffb686d.woff2",
@@ -21,9 +21,9 @@
   },
   "entrypoints": [
     "static/js/runtime-main.2a50764b.js",
-    "static/css/2.2ea7c8c3.chunk.css",
-    "static/js/2.dc81b2c8.chunk.js",
-    "static/css/main.514e0559.chunk.css",
-    "static/js/main.4ec88909.chunk.js"
+    "static/css/2.6a388199.chunk.css",
+    "static/js/2.cfd6f862.chunk.js",
+    "static/css/main.65b429b1.chunk.css",
+    "static/js/main.043000f0.chunk.js"
   ]
 }
