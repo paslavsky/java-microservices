@@ -10,6 +10,7 @@ import hljs from 'highlight.js/lib/highlight';
 import hljs_json from 'highlight.js/lib/languages/json';
 import hljs_js from 'highlight.js/lib/languages/javascript';
 import hljs_java from 'highlight.js/lib/languages/java';
+import hljs_sql from 'highlight.js/lib/languages/sql';
 import 'highlight.js/styles/github-gist.css'
 
 const TOC_DOC = 'toc.md';
@@ -21,6 +22,7 @@ class Doc extends React.Component {
         hljs.registerLanguage("json", hljs_json);
         hljs.registerLanguage("javascript", hljs_js);
         hljs.registerLanguage("java", hljs_java);
+        hljs.registerLanguage("sql", hljs_sql);
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
@@ -55,6 +57,7 @@ class Doc extends React.Component {
                 <div className="p-sm-12 p-md-12 p-lg-4 p-xl-3" style={{paddingTop: '5em'}}>
                     <div className="p-grid p-justify-around">
                         <Card style={{width: '280px'}}>
+                            <div className="toc-content">
                             {
                                 this.props.toc && this.props.toc.content ? (
                                     <Markdown options={mdOptions}>
@@ -62,12 +65,14 @@ class Doc extends React.Component {
                                     </Markdown>
                                 ) : (<ProgressSpinner/>)
                             }
+                            </div>
                         </Card>
                     </div>
                 </div>
                 <div className="p-sm-12 p-md-12 p-lg-8 p-xl-6">
                     <ScrollPanel style={{width: '100%', height: 'calc(100vh - 5.1em)', paddingTop: '5em'}}>
                         <Card>
+                            <div className="doc-content">
                             {
                                 this.props.doc && this.props.doc.content ? (
                                     <Markdown options={mdOptions}>
@@ -75,6 +80,7 @@ class Doc extends React.Component {
                                     </Markdown>
                                 ) : (<ProgressSpinner/>)
                             }
+                            </div>
                         </Card>
                     </ScrollPanel>
                 </div>

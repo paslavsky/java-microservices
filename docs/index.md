@@ -15,4 +15,4 @@ The difference between the first and regular requests is the warming time.
 
 For more details about Metrics and Measuring please see [testing](./testing.md) document.
 
-If you want to help please see [Contribution](./contribute.md) section.
+If you want to help please see [Contribution](contributing.md) section.

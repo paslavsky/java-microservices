@@ -7,7 +7,8 @@ Based on these considerations, we have established requirements for Sample API:
 
 * All Samples should implement one of the two API
 * Calculation logic should be implemented similarly (if other not required by library/framework).
-For example, to calculate the Fibonacci number, we should use recursive implementation.
+For example, to calculate the Fibonacci number, we should use the same function 
+(see example at [Create Sample](./create-samples.md)).
 From other side, the most popular JPA way in Spring Framework is to use Spring Data Repositories 
 (that is not possible to repeat with Ktor, but for Spring Framework it is a mainstream).
 

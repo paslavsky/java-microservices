@@ -34,7 +34,10 @@ const AppMenu = (props) => {
                 <div className="p-toolbar-group-left">
                     <Button icon="mdi mdi-24 mdi-menu" className="p-button-secondary"
                             style={{marginRight: '.25em'}}
-                            onClick={() => setSidebarVisible(true)}/>
+                            onClick={() => setSidebarVisible(true)}
+                    />
+
+                    <label className="app-title">Microservices in Java World</label>
                 </div>
                 <div className="p-toolbar-group-right">
                     <Button icon="mdi mdi-24 mdi-help" className="p-button-secondary"

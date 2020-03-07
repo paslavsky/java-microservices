@@ -1,4 +1,5 @@
 * [Home](./index.md)
 * [Testing and measuring](./testing.md)
-* [Contribute](./contribute.md)
+* [Contributing](contributing.md)
   * [Create Sample](./create-samples.md)
+* [License](./LICENSE)
