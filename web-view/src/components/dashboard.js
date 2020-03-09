@@ -84,7 +84,7 @@ const Dashboard = (props) => {
                 </div>
             </div>
             <div className="p-sm-12 p-md-12 p-lg-8 p-xl-6">
-                <ScrollPanel style={{width: '100%', height: 'calc(100vh - 5.1em)', paddingTop: '5em'}}>
+                <ScrollPanel style={{width: '100%', height: 'calc(100vh - 5.1em)', paddingTop: '4.6em'}}>
                     <ChartCard title="Memory on start (Mb)" chartType={chartType} data={props.memoryOnStart}
                                first={true} samples={samples}/>
 
