@@ -5,15 +5,14 @@ import kotlinx.coroutines.withContext
 import org.gradle.internal.jvm.Jvm
 import java.io.Closeable
 import java.io.File
-import java.io.IOException
 
 class SampleProcess(private val output: File, private val description: SampleDescription) : AutoCloseable, Closeable {
     private val pid: Long
     private val process: Process
-    private val log by lazy {
+    init {
         output.mkdirs()
-        File(output, "${description.name}.log").outputStream()
     }
+    private val logFile by lazy { File(output, "${description.name}.log") }
 
     init {
         Runtime.getRuntime().exec(arrayOf(Jvm.current().javaExecutable.path, "-jar", description.artifact.path)).also {
@@ -42,12 +41,6 @@ class SampleProcess(private val output: File, private val description: SampleDes
                             log(line)
                         }
                     } while (line != null)
-
-                    try {
-                        log.flush()
-                        log.close()
-                    } catch (ignore: IOException) {
-                    }
                 }
             }
 
@@ -56,8 +49,7 @@ class SampleProcess(private val output: File, private val description: SampleDes
     }
 
     private fun log(line: String) {
-        log.write("$line\n".toByteArray())
-        log.flush()
+        logFile.appendText("$line\n")
     }
 
     val realMemory: Long?

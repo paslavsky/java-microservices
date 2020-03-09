@@ -30,11 +30,6 @@ fun main(args: Array<String>) {
 
 @Suppress("unused") // Referenced in application.conf
 fun Application.module() {
-    environment.monitor.subscribe(ApplicationStarted) {
-        val uptime = ManagementFactory.getRuntimeMXBean().uptime / 1000.0
-        LoggerFactory.getLogger(Application::class.java).info("Uptime $uptime seconds")
-    }
-
     install(SqlFeature)
     install(ExposedFeature) {
         init {
@@ -43,6 +38,8 @@ fun Application.module() {
                     it.execute("CREATE TABLE persons(id SERIAL, first_name VARCHAR(255), last_name VARCHAR(255))")
                 }
             }
+            val uptime = ManagementFactory.getRuntimeMXBean().uptime / 1000.0
+            LoggerFactory.getLogger(Application::class.java).info("Uptime $uptime seconds")
         }
     }
 
