@@ -6,14 +6,14 @@
     "runtime-main.js": "/java-microservices/static/js/runtime-main.2a50764b.js",
     "runtime-main.js.map": "/java-microservices/static/js/runtime-main.2a50764b.js.map",
     "static/css/2.ab7fb5af.chunk.css": "/java-microservices/static/css/2.ab7fb5af.chunk.css",
-    "static/js/2.a1a51839.chunk.js": "/java-microservices/static/js/2.a1a51839.chunk.js",
-    "static/js/2.a1a51839.chunk.js.map": "/java-microservices/static/js/2.a1a51839.chunk.js.map",
+    "static/js/2.d39b530c.chunk.js": "/java-microservices/static/js/2.d39b530c.chunk.js",
+    "static/js/2.d39b530c.chunk.js.map": "/java-microservices/static/js/2.d39b530c.chunk.js.map",
     "index.html": "/java-microservices/index.html",
-    "precache-manifest.d6edb78bece6294cc7f33df3e1b8c15e.js": "/java-microservices/precache-manifest.d6edb78bece6294cc7f33df3e1b8c15e.js",
+    "precache-manifest.e03c45e24c6ce6b90252fa5ca14e1dd7.js": "/java-microservices/precache-manifest.e03c45e24c6ce6b90252fa5ca14e1dd7.js",
     "service-worker.js": "/java-microservices/service-worker.js",
     "static/css/2.ab7fb5af.chunk.css.map": "/java-microservices/static/css/2.ab7fb5af.chunk.css.map",
     "static/css/main.c49dba36.chunk.css.map": "/java-microservices/static/css/main.c49dba36.chunk.css.map",
-    "static/js/2.a1a51839.chunk.js.LICENSE.txt": "/java-microservices/static/js/2.a1a51839.chunk.js.LICENSE.txt",
+    "static/js/2.d39b530c.chunk.js.LICENSE.txt": "/java-microservices/static/js/2.d39b530c.chunk.js.LICENSE.txt",
     "static/media/primereact.min.css": "/java-microservices/static/media/line.567f5738.gif",
     "static/media/materialdesignicons.min.css": "/java-microservices/static/media/materialdesignicons-webfont.f5111234.ttf",
     "static/media/theme.css": "/java-microservices/static/media/open-sans-v15-latin-regular.cffb686d.woff2",
@@ -22,7 +22,7 @@
   "entrypoints": [
     "static/js/runtime-main.2a50764b.js",
     "static/css/2.ab7fb5af.chunk.css",
-    "static/js/2.a1a51839.chunk.js",
+    "static/js/2.d39b530c.chunk.js",
     "static/css/main.c49dba36.chunk.css",
     "static/js/main.2bbc88fc.chunk.js"
   ]

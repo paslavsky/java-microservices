@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2e128d317eadeabb41e6616167aa0a81",
+    "revision": "0e9243bfdbb54e877aa46243abbc2298",
     "url": "/java-microservices/index.html"
   },
   {
-    "revision": "ccd182b27246c71d5196",
+    "revision": "d38c1dfa57f892bc8fc2",
     "url": "/java-microservices/static/css/2.ab7fb5af.chunk.css"
   },
   {
@@ -12,12 +12,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/java-microservices/static/css/main.c49dba36.chunk.css"
   },
   {
-    "revision": "ccd182b27246c71d5196",
-    "url": "/java-microservices/static/js/2.a1a51839.chunk.js"
+    "revision": "d38c1dfa57f892bc8fc2",
+    "url": "/java-microservices/static/js/2.d39b530c.chunk.js"
   },
   {
     "revision": "14b43d3b8bf07a0152720664793b77a0",
-    "url": "/java-microservices/static/js/2.a1a51839.chunk.js.LICENSE.txt"
+    "url": "/java-microservices/static/js/2.d39b530c.chunk.js.LICENSE.txt"
   },
   {
     "revision": "af2d17b5f7e231e713d0",
